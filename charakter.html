@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <title>Über das Spiel</title>
+
+  <style>
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
+
+.container {
+  padding: 40px;
+}
+
+    .item {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  margin-bottom: 20px;
+}
+
+.item img {
+  width: 150px;
+  height: 150px;
+  object-fit: cover;  /* Bild bleibt schön geschnitten */
+  border-radius: 8px;
+}
+
+.text {
+  flex: 1;
+}
+
+@media (max-width: 600px) {
+
+  .container {
+    padding: 10px; /* 👉 weniger Rand auf Handy */
+  }
+
+  .item {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .item img {
+    width: 120px;
+    height: 120px;
+  }
+}
+  </style>
+
+</head>
+<body>
+
+     <div class="container">
+  <h1>Über das Spiel</h1>
+
+  <div class="item">
+    <img src="Bilder/Eisenschelle.jpeg" alt="Bild 1">
+    <div class="text">
+        <h2>Dr. Eisenschelle</h2>
+        <p>Coole Schläge.</p>
+    </div>
+   </div>
+
+  <a href="main_site.html">⬅ Zurück zur Startseite</a>
+  </div>
+
+</body>
+</html>
