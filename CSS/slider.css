@@ -95,12 +95,12 @@
 
      .prev_img {
         transform: translate(-200%, -50%) scale(0.7);
-        opacity: 0.2;
+        opacity: 0;
     }
 
     .next_img {
         transform: translate(100%, -50%) scale(0.7);
-        opacity: 0.2;
+        opacity: 0;
     }
 
     .active_img {
