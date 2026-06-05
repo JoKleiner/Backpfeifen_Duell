@@ -1,0 +1,109 @@
+.slider {
+    position: relative;
+    width: 700px;
+    height: 400px;
+    margin: 20px auto;
+}
+
+.slider img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 60%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 12px;
+
+    transition: all 0.4s ease;
+}
+
+.prev_img {
+    transform: translate(-150%, -50%) scale(0.85);
+    opacity: 0.5;
+    z-index: 1;
+}
+
+.active_img {
+    transform: translate(-50%, -50%) scale(1);
+    opacity: 1;
+    z-index: 3;
+}
+
+.next_img {
+    transform: translate(50%, -50%) scale(0.85);
+    opacity: 0.5;
+    z-index: 1;
+}
+
+.inactive_img {
+    opacity: 0;
+    transform: translate(-50%, -50%) scale(0.7);
+    z-index: 0;
+}
+
+
+/* Slider Button----------------------------------------------*/
+.slide_button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+
+    background: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    font-size: 40px;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    cursor: pointer;
+
+    z-index: 10;
+    backdrop-filter: blur(5px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    line-height: 1;
+}
+
+.slide_button span {
+    transform: translateY(-3px);
+}
+
+.prev-slide_button {
+    left: 10px;
+}
+
+.next-slide_button {
+    right: 10px;
+}
+
+.slide_button:hover {
+    background: rgba(0, 0, 0, 0.8);
+}
+
+/* Handy ------------------------------------------------------*/
+@media (max-width: 768px) {
+
+    .slider {
+        width: 100%;
+        height: 250px;
+    }
+
+    .slider img {
+        width: 70%;
+    }
+
+     .prev_img {
+        transform: translate(-200%, -50%) scale(0.7);
+        opacity: 0.2;
+    }
+
+    .next_img {
+        transform: translate(100%, -50%) scale(0.7);
+        opacity: 0.2;
+    }
+
+    .active_img {
+        transform: translate(-50%, -50%) scale(1.05);
+    }
+}

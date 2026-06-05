@@ -3,7 +3,9 @@
 
 <head>
   <meta charset="UTF-8">
-  <link rel="stylesheet" href="style.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="CSS/style.css">
+  <link rel="stylesheet" href="CSS/slider.css">
 
   <title>Backpfeifen-Duell</title>
   <link rel="icon" href="Bilder/Schelle_blau_icon.jpg">
@@ -12,22 +14,41 @@
 
 <body class="frontpage">
 
+  <!-- Hintergrund-Bild auskommentiert
+  <img src="Bilder/Banane_trans.png" class="background-img">
+  -->
+
   <div class="bigbox_front">
 
+    <h2>Flying Banana Games</h2>
+    <p>Präsentiert:</p>
     <h1>Backpfeifen Duell</h1>
 
-    <p>
-      Ein spannendes Brettspiel für 2 Spieler.
-    </p>
+    <p>Backpfeifen Duell ist ein taktisches 1 gegen 1 Kartenspiel.</p>
 
-    <h2>Preis: 19,90 €</h2>
+
+    <h3>Deine Helden</h3>
+
+    <div class="slider">
+
+      <img src="Bilder/Eisenschelle.jpeg">
+      <img src="Bilder/Knockout.jpeg">
+      <img src="Bilder/Vantage.jpeg">
+      <img src="Bilder/Banane.jpeg">
+
+      <button class="slide_button prev-slide_button" onclick="changeSlide(-1)"><span>‹</span></button>
+      <button class="slide_button next-slide_button" onclick="changeSlide(1)"><span>›</span></button>
+
+    </div>
+
+
 
     <button onclick="window.location.href='https://www.paypal.com'">
       Jetzt kaufen
     </button>
 
   </div>
-  <script src="burger.js"></script>
+  <script src="JS/slider.js"></script>
 </body>
 
 </html>
