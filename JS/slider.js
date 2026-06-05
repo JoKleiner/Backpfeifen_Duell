@@ -1,6 +1,6 @@
 document.addEventListener("DOMContentLoaded", () => {
 
-    const slides = document.querySelectorAll(".slider img");
+    const slides = document.querySelectorAll(".slider_box");
     const slider = document.querySelector(".slider");
 
     let index = 0;
@@ -8,9 +8,9 @@ document.addEventListener("DOMContentLoaded", () => {
     /* ---------------- UPDATE SLIDER ---------------- */
     function updateSlider() {
 
-        slides.forEach(img => {
-            img.classList.remove("prev_img", "active_img", "next_img", "inactive_img");
-            img.classList.add("inactive_img");
+        slides.forEach(slide => {
+            slide.classList.remove("prev_box", "active_box", "next_box", "inactive_box");
+            slide.classList.add("inactive_box");
         });
 
         let prevIndex = index - 1;
@@ -20,20 +20,20 @@ document.addEventListener("DOMContentLoaded", () => {
         if (nextIndex >= slides.length) nextIndex = 0;
 
         // prev
-        slides[prevIndex].classList.remove("inactive_img");
-        slides[prevIndex].classList.add("prev_img");
+        slides[prevIndex].classList.remove("inactive_box");
+        slides[prevIndex].classList.add("prev_box");
 
         // active
-        slides[index].classList.remove("inactive_img");
-        slides[index].classList.add("active_img");
+        slides[index].classList.remove("inactive_box");
+        slides[index].classList.add("active_box");
 
         // next
-        slides[nextIndex].classList.remove("inactive_img");
-        slides[nextIndex].classList.add("next_img");
+        slides[nextIndex].classList.remove("inactive_box");
+        slides[nextIndex].classList.add("next_box");
     }
 
     /* ---------------- BUTTON NAV ---------------- */
-    window.changeSlide = function(direction) {
+    window.changeSlide = function (direction) {
         index += direction;
 
         if (index < 0) index = slides.length - 1;
@@ -52,6 +52,22 @@ document.addEventListener("DOMContentLoaded", () => {
         if (e.key === "ArrowLeft") {
             changeSlide(-1);
         }
+    });
+
+    /* ---------------- KLICK ON PIC (PC) ---------------- */
+    slides.forEach((slide, i) => {
+
+        slide.addEventListener("click", () => {
+
+            if (slide.classList.contains("prev_box")) {
+                changeSlide(-1);
+            }
+
+            if (slide.classList.contains("next_box")) {
+                changeSlide(1);
+            }
+        });
+
     });
 
     /* ---------------- TOUCH (HANDY SWIPE) ---------------- */
