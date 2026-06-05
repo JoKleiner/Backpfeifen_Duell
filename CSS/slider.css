@@ -93,14 +93,9 @@
         width: 70%;
     }
 
-     .prev_img {
-        transform: translate(-200%, -50%) scale(0.7);
-        opacity: 0;
-    }
-
+    .prev_img,
     .next_img {
-        transform: translate(100%, -50%) scale(0.7);
-        opacity: 0;
+        display: none;
     }
 
     .active_img {

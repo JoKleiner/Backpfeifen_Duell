@@ -2,6 +2,7 @@ body {
     font-family: 'Indie Flower', sans-serif;
     background: hsl(56, 100%, 82%);
     margin: 0;
+    width: 100%;
 }
 
 h1 {
@@ -52,6 +53,19 @@ button:hover {
     width: 2000px;
     z-index: -1;
     opacity: 1;
+}
+
+.text_logo {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+}
+
+.text_logo img {
+    width: 120px;
+    height: auto;
+    border-radius: 8px;
 }
 
 /* Handy ------------------------------------------------------*/
