@@ -111,7 +111,7 @@ button:hover {
 
 .privacy_row {
     max-width: 520px;
-    margin: 18px auto 0;
+    margin: 18px 0 0;
     text-align: left;
 }
 
@@ -123,6 +123,7 @@ button:hover {
     color: #000;
     line-height: 1.2;
     white-space: nowrap;
+    flex-wrap: nowrap;
 }
 
 .privacy_label input {
@@ -140,18 +141,33 @@ button:hover {
     color: #000;
 }
 
-.status_card {
+.newsletter_card,
+.status_card,
+.instruction_card,
+.social_card {
     max-width: 800px;
-    margin: 30px auto 0;
+    margin: 24px auto 0;
     padding: 24px;
-    border: 2px solid #000;
     border-radius: 22px;
-    background: #fff;
-    box-shadow: 0 12px 20px rgba(0, 0, 0, 0.08);
     text-align: left;
 }
 
-.status_card h2 {
+.status_card {
+    background: rgb(255, 255, 255);
+    border: 2px solid #000;
+    box-shadow: 0 12px 20px rgba(0, 0, 0, 0.08);
+}
+
+.instruction_card,
+.social_card {
+    border: none;
+    box-shadow: none;
+}
+
+.status_card h2,
+.instruction_card h2,
+.social_card h2,
+.newsletter_card h2 {
     font-size: 3rem;
     margin: 0 0 18px;
 }
@@ -294,6 +310,17 @@ button:hover {
         box-sizing: border-box;
     }
 
+    .privacy_label {
+        flex-wrap: wrap;
+        gap: 8px;
+        white-space: normal;
+    }
+
+    .privacy_link {
+        display: inline-block;
+        min-width: 0;
+    }
+
     h1 {
         font-size: 3rem;
     }
@@ -359,4 +386,3 @@ button:hover {
         font-size: 1.2rem;
     }
 }
-
