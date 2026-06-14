@@ -2,11 +2,21 @@ document.addEventListener("DOMContentLoaded", () => {
 
     const slides = document.querySelectorAll(".slider_box");
     const slider = document.querySelector(".slider");
+    const punchSound = new Audio("Media/Punch.mp3");
+    punchSound.volume = 0.75;
+    punchSound.preload = "auto";
+    punchSound.load();
+
+    function playPunch() {
+        punchSound.currentTime = 0;
+        punchSound.play().catch(() => {});
+    }
 
     let index = 0;
 
     /* ---------------- UPDATE SLIDER ---------------- */
     function updateSlider() {
+        playPunch();
 
         slides.forEach(slide => {
             slide.classList.remove("prev_box", "active_box", "next_box", "inactive_box");
@@ -73,24 +83,26 @@ document.addEventListener("DOMContentLoaded", () => {
     /* ---------------- TOUCH (HANDY SWIPE) ---------------- */
     let startX = 0;
     let endX = 0;
+    let isDragging = false;
 
-    slider.addEventListener("touchstart", (e) => {
+    document.addEventListener("touchstart", (e) => {
+        if (!e.target.closest(".slider")) return;
         startX = e.touches[0].clientX;
+        isDragging = true;
     });
 
-    slider.addEventListener("touchend", (e) => {
+    document.addEventListener("touchend", (e) => {
+        if (!isDragging) return;
+
         endX = e.changedTouches[0].clientX;
 
         let diff = startX - endX;
 
         if (Math.abs(diff) > 50) {
-
-            if (diff > 0) {
-                changeSlide(1);   // swipe left → next
-            } else {
-                changeSlide(-1);  // swipe right → prev
-            }
+            changeSlide(diff > 0 ? 1 : -1);
         }
+
+        isDragging = false;
     });
 
     /* ---------------- START ---------------- */

@@ -9,73 +9,138 @@
   <link rel="stylesheet" href="CSS/slider.css">
 
   <title>Backpfeifen-Duell</title>
-  <link rel="icon" href="Bilder/Schelle_blau_icon.jpg">
+  <link rel="icon" href="Media/Schelle_blau_icon.jpg">
 </head>
 
 
 <body class="frontpage">
 
   <!-- Hintergrund-Bild auskommentiert
-  <img src="Bilder/Banane_trans.png" class="background-img">
+  <img src="Media/Banane_trans.png" class="background-img">
   -->
 
   <div class="bigbox_front">
-
     <h2>Flying Banana Games</h2>
 
     <div class="text_logo">
-      <img src="Bilder/Banane_trans.png">
+      <img src="Media/Banane_trans.png">
       <p>Präsentiert:</p>
     </div>
 
     <h1>Backpfeifen Duell</h1>
-
     <p>Backpfeifen Duell ist ein taktisches 1 gegen 1 Kartenspiel.</p>
-
-
     <h3>Deine Helden</h3>
+  </div>
 
-    <div class="slider">
-
-      <div class="slider_box">
-        <img src="Bilder/Eisenschelle.jpeg">
-        <p class="slider_text bold">Dr. Eisenschelle</p>
-        <p class="slider_text">■ bla bla</p>
-        <p class="slider_text">■ bla bla</p>
-        <p class="slider_text">■ bla bla</p>
-        <p class="slider_text">■ bla bla</p>
+  <div class="slider">
+    <div class="slider_box">
+      <img class="slider_img" src="Media/Eisenschelle.jpeg">
+      <p class="slider_text">Dr. Eisenschelle</p>
+      <div class="slider_items">
+        <p class="slider_item"><img class="slider_icon" src="Media/Schelle_blau.jpeg"> Starker Nahkampfangriff</p>
+        <p class="slider_item"><img class="slider_icon" src="Media/Schelle_Rot.jpeg"> Rote Kombo für extra Schaden</p>
+        <p class="slider_item"><img class="slider_icon" src="Media/Blau_Block.jpeg"> Verteidigt gegen Feinde</p>
+        <p class="slider_item"><img class="slider_icon" src="Media/Rot_Block.jpeg"> Verteidigt gegen Feinde</p>
       </div>
-
-      <div class="slider_box">
-        <img src="Bilder/Knockout.jpeg">
-        <p class="slider_text bold">Vito Knockout</p>
-        <p class="slider_text">■ bla bla</p>
-      </div>
-
-      <div class="slider_box">
-        <img src="Bilder/Vantage.jpeg">
-        <p class="slider_text bold">Miss Vantage</p>
-        <p class="slider_text">■ bla bla</p>
-      </div>
-
-      <div class="slider_box">
-        <img src="Bilder/Banane.jpeg">
-        <p class="slider_text bold">Banane</p>
-        <p class="slider_text">■ bla bla</p>
-      </div>
-
-      <button class="slide_button prev-slide_button" onclick="changeSlide(-1)"><span>‹</span></button>
-      <button class="slide_button next-slide_button" onclick="changeSlide(1)"><span>›</span></button>
     </div>
 
+    <div class="slider_box">
+      <img class="slider_img" src="Media/Knockout.jpeg">
+      <p class="slider_text">Vito Knockout</p>
+      <div class="slider_items">
+        <p class="slider_item"><img class="slider_icon" src="Media/Schelle_blau.jpeg"> blabla </p>
+        <p class="slider_item"><img class="slider_icon" src="Media/Schelle_Rot.jpeg"> blabla</p>
+        <p class="slider_item"><img class="slider_icon" src="Media/Blau_Block.jpeg"> blabla</p>
+        <p class="slider_item"><img class="slider_icon" src="Media/Rot_Block.jpeg"> bla blab</p>
+      </div>
+    </div>
 
+    <div class="slider_box">
+      <img class="slider_img" src="Media/Vantage.jpeg">
+      <p class="slider_text">Miss Vantage</p>
+      <div class="slider_items">
+        <p class="slider_item"><img class="slider_icon" src="Media/Schelle_blau.jpeg"> blabla </p>
+        <p class="slider_item"><img class="slider_icon" src="Media/Schelle_Rot.jpeg"> blabla</p>
+        <p class="slider_item"><img class="slider_icon" src="Media/Blau_Block.jpeg"> blabla</p>
+        <p class="slider_item"><img class="slider_icon" src="Media/Rot_Block.jpeg"> blab lbaba</p>
+      </div>
+    </div>
 
-    <button onclick="window.location.href='https://www.paypal.com'">
-      Jetzt kaufen
-    </button>
+    <div class="slider_box">
+      <img class="slider_img" src="Media/Banane.jpeg">
+      <p class="slider_text bold">Banane</p>
+      <div class="slider_items">
+      </div>
+    </div>
 
+    <button class="slide_button prev-slide_button" onclick="changeSlide(-1)"><span>‹</span></button>
+    <button class="slide_button next-slide_button" onclick="changeSlide(1)"><span>›</span></button>
   </div>
+
+  <div class="bigbox_front">
+
+    <h2>Newsletter Anmeldung</h2>
+
+    <input id="email" type="email" placeholder="Deine E-Mail">
+
+    <div class="privacy_row">
+      <label class="privacy_label" for="consent">
+        <input id="consent" type="checkbox">
+        Ich stimme der <a class="privacy_link" href="datenschutz.html" target="_blank"
+          rel="noopener noreferrer">Datenschutzerklärung</a> zu.
+      </label>
+    </div>
+
+    <button id="btn" class="download_button" type="button">Anmelden</button>
+
+    <p id="msg"></p>
+  </div>
+
+
+  <div class="status_card">
+    <h2>Status</h2>
+    <div class="status_item">
+      <span class="status_badge status_done">✓</span>
+      <span>Karten Dr. Eisenschelle</span>
+    </div>
+
+    <div class="status_item">
+      <span class="status_badge status_inprogress">In Bearbeitung</span>
+      <span>Karten Miss Vantage</span>
+    </div>
+
+    <div class="status_item">
+      <span class="status_badge status_planned">Geplant</span>
+      <span>1. Auflage</span>
+    </div>
+  </div>
+
+  <div class="instruction_card">
+    <h2>Anleitung</h2>
+    <a class="download_button" href="Media/anleitung.pdf" download target="_blank" rel="noopener noreferrer">PDF
+      herunterladen</a>
+  </div>
+
+  <div class="social_card">
+    <h2>Social</h2>
+    <a class="social_icon_link" href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer">
+      <img class="social_icon" src="Media/insta_logo.png">
+    </a>
+
+    <a class="social_icon_link" href="https://www.tiktok.com/" target="_blank" rel="noopener noreferrer">
+      <img class="social_icon" src="Media/tiktok_logo.jpg">
+    </a>
+  </div>
+
+  <div class="impressum_card">
+    <h2>Impressum</h2>
+    <p>Flying Banana Games<br>Max Mustermann<br>Beispielstraße 1<br>12345 Musterstadt<br><a
+        href="mailto:info@flyingbananagames.de">info@flyingbananagames.de</a></p>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
   <script src="JS/slider.js"></script>
+  <script src="JS/mail_list.js"></script>
 </body>
 
 </html>

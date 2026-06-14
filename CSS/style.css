@@ -5,6 +5,19 @@ body {
     width: 100%;
 }
 
+/* Prevent horizontal scrolling on small devices */
+html,
+body {
+    overflow-x: hidden;
+}
+
+/* Ensure images never exceed their container */
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
 h1 {
     font-size: 6rem;
 }
@@ -16,6 +29,7 @@ h2 {
 
 h3 {
     font-size: 4rem;
+    margin: 0;
 }
 
 p {
@@ -42,7 +56,6 @@ button:hover {
 .bigbox_front {
     max-width: 1200px;
     margin: 0 auto;
-    padding: 30px;
     text-align: center;
 }
 
@@ -67,6 +80,208 @@ button:hover {
     width: 120px;
     height: auto;
     border-radius: 8px;
+}
+
+#email {
+    width: 450px;
+    padding: 10px;
+    font-size: 30px;
+}
+
+#btn {
+    display: inline-block;
+    padding: 14px 20px;
+    border-radius: 16px;
+    background: #2c3e50;
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.6rem;
+    border: 2px solid #000;
+    cursor: pointer;
+}
+
+#msg {
+    color: red;
+    font-weight: bold;
+}
+
+#msg.success {
+    color: green;
+}
+
+.privacy_row {
+    max-width: 520px;
+    margin: 18px auto 0;
+    text-align: left;
+}
+
+.privacy_label {
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+    font-size: 1.8rem;
+    color: #000;
+    line-height: 1.2;
+    white-space: nowrap;
+}
+
+.privacy_label input {
+    width: 24px;
+    height: 24px;
+    margin: 0;
+}
+
+.privacy_link {
+    color: #2c3e50;
+    text-decoration: underline;
+}
+
+.privacy_link:hover {
+    color: #000;
+}
+
+.status_card {
+    max-width: 800px;
+    margin: 30px auto 0;
+    padding: 24px;
+    border: 2px solid #000;
+    border-radius: 22px;
+    background: #fff;
+    box-shadow: 0 12px 20px rgba(0, 0, 0, 0.08);
+    text-align: left;
+}
+
+.status_card h2 {
+    font-size: 3rem;
+    margin: 0 0 18px;
+}
+
+.status_item {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    margin-bottom: 12px;
+    font-size: 2.2rem;
+}
+
+.status_item:last-child {
+    margin-bottom: 0;
+}
+
+.status_badge {
+    width: 180px;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    padding: 12px 16px;
+    border-radius: 16px;
+    color: #fff;
+    font-weight: bold;
+    font-size: 1.8rem;
+}
+
+.status_done {
+    background: #27ae60;
+}
+
+.status_inprogress {
+    background: #2980b9;
+}
+
+.status_planned {
+    background: #c0392b;
+}
+
+.instruction_card {
+    max-width: 800px;
+    margin: 24px auto 0;
+    padding: 24px;
+    border: none;
+    border-radius: 22px;
+    background: transparent;
+    box-shadow: none;
+    text-align: left;
+}
+
+.instruction_card h2 {
+    font-size: 3rem;
+    margin: 0 0 18px;
+}
+
+.instruction_card p {
+    font-size: 1.8rem;
+    margin: 0 0 16px;
+}
+
+.instruction_card .download_button {
+    display: inline-block;
+    padding: 14px 20px;
+    border-radius: 16px;
+    background: #2c3e50;
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.6rem;
+    border: 2px solid #000;
+}
+
+.instruction_card .download_button:hover {
+    background: #34495e;
+}
+
+.social_card {
+    max-width: 800px;
+    margin: 24px auto 0;
+    padding: 24px;
+    border: none;
+    border-radius: 22px;
+    background: transparent;
+    text-align: left;
+}
+
+.social_card h2 {
+    font-size: 3rem;
+    margin: 0 0 18px;
+}
+
+.social_icon_link {
+    display: inline-block;
+    width: 76px;
+    height: 76px;
+}
+
+.social_icon_link:hover {
+    opacity: 0.6;
+}
+
+.social_item span {
+    color: #000;
+}
+
+.impressum_card {
+    width: 100%;
+    background: #000000;
+    color: #fff;
+    text-align: left;
+    padding: 50px;
+}
+
+.impressum_card h2 {
+    font-size: 3rem;
+}
+
+.impressum_card p {
+    font-size: 1.8rem;
+    line-height: 1.6;
+    margin: 0;
+}
+
+.impressum_card a {
+    color: #4990d8;
+    text-decoration: underline;
+}
+
+.impressum_card a:hover {
+    color: #000;
 }
 
 /* Handy ------------------------------------------------------*/
@@ -96,59 +311,52 @@ button:hover {
     }
 
     button {
-        width: 100%;
+        width: 60%;
         font-size: 18px;
+    }
+
+    #email {
+        width: 80%;
+        padding: 10px;
+        font-size: 20px;
+    }
+
+    .status_card {
+        padding: 18px;
+        max-width: 100%;
+    }
+
+    .status_card h2 {
+        font-size: 2rem;
+        margin-bottom: 14px;
+    }
+
+    .status_item {
+        gap: 12px;
+        margin-bottom: 10px;
+        font-size: 1.2rem;
+    }
+
+    .status_badge {
+        width: 100px;
+        padding: 8px 10px;
+        font-size: 0.8rem;
+    }
+
+    .impressum_card {
+        padding: 24px;
+    }
+
+    .impressum_card h2 {
+        font-size: 2rem;
+    }
+
+    .impressum_card p {
+        font-size: 1.2rem;
+    }
+
+    .impressum_card a {
+        font-size: 1.2rem;
     }
 }
 
-
-/* Burger Menu-------------------------------------------------
-
-html:   <script src="burger.js"></script>
-
-.burger {
-    position: absolute;
-    top: 10px;
-    right: 10px;
-
-    border-radius: 8px;
-    font-size: 50px;
-    height: 70px;
-    width: 70px;
-
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
-    cursor: pointer;
-    background: #333;
-    color: white;
-}
-
-.menu {
-    display: none;
-    background: #333;
-    position: absolute;
-
-    top: 10px;
-    right: 70px;
-
-    width: 150px;
-    border-radius: 8px;
-}
-
-.menu a {
-    display: block;
-    color: white;
-    padding: 10px;
-    text-decoration: none;
-}
-
-.menu a:hover {
-    background: #555;
-    border-radius: 8px;
-}
-
-.menu.active {
-    display: block;
-}*/
